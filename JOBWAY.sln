@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOBWAY", "JOBWAY\JOBWAY.csproj", "{F259772C-476F-4587-90B4-200683C92D28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F259772C-476F-4587-90B4-200683C92D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F259772C-476F-4587-90B4-200683C92D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F259772C-476F-4587-90B4-200683C92D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F259772C-476F-4587-90B4-200683C92D28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6433CB70-E2F9-4825-AB96-EDDF530FB0D8}
+	EndGlobalSection
+EndGlobal
