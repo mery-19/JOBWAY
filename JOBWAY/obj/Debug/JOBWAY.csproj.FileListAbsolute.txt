@@ -440,3 +440,4 @@ D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.csproj.
 D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.dll
 D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.pdb
 D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.Migrations.addCategorie.resources
+D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.Migrations.addVille.resources

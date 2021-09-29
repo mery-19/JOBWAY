@@ -22,6 +22,7 @@ namespace JOBWAY.Models
         private DateTime dateTime = DateTime.Now;
         private bool isTaken = false;
         private string categorie;
+        private string ville;
 
         public int Id { get => id; set => id = value; }
         public string Titre { get => titre; set => titre = value; }
@@ -33,6 +34,8 @@ namespace JOBWAY.Models
         public DateTime DateTime { get => dateTime; set => dateTime = value; }
         public bool IsTaken { get => isTaken; set => isTaken = value; }
         public string Categorie { get => categorie; set => categorie = value; }
+        public string Ville { get => ville; set => ville = value; }
+
 
     }
 }

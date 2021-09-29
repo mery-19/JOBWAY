@@ -130,6 +130,10 @@
     <Compile Include="Migrations\202109291439490_addCategorie.Designer.cs">
       <DependentUpon>202109291439490_addCategorie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109291508442_addVille.cs" />
+    <Compile Include="Migrations\202109291508442_addVille.Designer.cs">
+      <DependentUpon>202109291508442_addVille.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Models\Offre.cs" />
@@ -169,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109291439490_addCategorie.resx">
       <DependentUpon>202109291439490_addCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109291508442_addVille.resx">
+      <DependentUpon>202109291508442_addVille.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
