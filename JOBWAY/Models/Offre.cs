@@ -19,6 +19,8 @@ namespace JOBWAY.Models
         private double salaire;
         private string phone;
         private string email;
+        private DateTime dateTime;
+        private bool isTaken;
 
         public int Id { get => id; set => id = value; }
         public string Titre { get => titre; set => titre = value; }
@@ -27,5 +29,7 @@ namespace JOBWAY.Models
         public double Salaire { get => salaire; set => salaire = value; }
         public string Phone { get => phone; set => phone = value; }
         public string Email { get => email; set => email = value; }
+        public DateTime DateTime { get => dateTime; set => dateTime = value; }
+        public bool IsTaken { get => isTaken; set => isTaken = value; }
     }
 }

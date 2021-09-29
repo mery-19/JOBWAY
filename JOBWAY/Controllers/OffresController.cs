@@ -16,9 +16,28 @@ namespace JOBWAY.Controllers
         private Model1 db = new Model1();
 
         // GET: Offres
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Offres.ToList());
+            /*ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "title_offre" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var students = from o in db.Offres
+                           select o;
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.LastName);
+                    break;
+                case "Date":
+                    students = students.OrderBy(s => s.EnrollmentDate);
+                    break;
+                case "date_desc":
+                    students = students.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                default:
+                    students = students.OrderBy(s => s.LastName);
+                    break;
+            }*/
+            return View(/*students.ToList()*/);
         }
 
         // GET: Offres/Details/5
