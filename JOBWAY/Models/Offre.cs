@@ -19,8 +19,8 @@ namespace JOBWAY.Models
         private double salaire;
         private string phone;
         private string email;
-        private DateTime dateTime;
-        private bool isTaken;
+        private DateTime dateTime = DateTime.Now;
+        private bool isTaken = false;
 
         public int Id { get => id; set => id = value; }
         public string Titre { get => titre; set => titre = value; }

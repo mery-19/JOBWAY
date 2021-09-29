@@ -71,12 +71,15 @@
         Liste des offres
     </h1>
 
-    @using (Html.BeginForm("Index", "Student", FormMethod.Get))
+    @using (Html.BeginForm("Index", "Offres", FormMethod.Get))
     {
-        <p>
-            Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-            <input type="submit" value="Search" />
-        </p>
+        <div class="form-inline" style="margin-top:20px;margin-bottom:20px">
+            <div class="form-group mb-2">
+                <label class="sr-only">Chercher</label>
+                @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+            </div>
+            <input type="submit" class="btn btn-primary mb-2" value="Search"/>
+        </div>
     }
 
     @foreach (var item in Model)
@@ -95,6 +98,7 @@
                 <p><strong>@Html.DisplayNameFor(model => model.Email) :</strong> @Html.DisplayFor(modelItem => item.Email)</p>
                 <p><strong>@Html.DisplayNameFor(model => model.Phone) :</strong> @Html.DisplayFor(modelItem => item.Phone)</p>
                 <p><strong>@Html.DisplayNameFor(model => model.Salaire) :</strong> @Html.DisplayFor(modelItem => item.Salaire)</p>
+                <p><strong>le :</strong> @Html.DisplayFor(modelItem => item.DateTime)</p>
                 @Html.ActionLink("View Project", "Details", new { id = item.Id }, new { @class = "btn btn-primary" })
             </div>
         </div>

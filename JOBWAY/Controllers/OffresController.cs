@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using JOBWAY;
 using JOBWAY.Models;
+using PagedList;
 
 namespace JOBWAY.Controllers
 {
@@ -16,28 +17,16 @@ namespace JOBWAY.Controllers
         private Model1 db = new Model1();
 
         // GET: Offres
-        public ActionResult Index(string sortOrder)
+        public ActionResult Index(string searchString)
         {
-            /*ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "title_offre" : "";
-            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
-            var students = from o in db.Offres
+            var offres = from o in db.Offres
                            select o;
-            switch (sortOrder)
+            if (!String.IsNullOrEmpty(searchString))
             {
-                case "name_desc":
-                    students = students.OrderByDescending(s => s.LastName);
-                    break;
-                case "Date":
-                    students = students.OrderBy(s => s.EnrollmentDate);
-                    break;
-                case "date_desc":
-                    students = students.OrderByDescending(s => s.EnrollmentDate);
-                    break;
-                default:
-                    students = students.OrderBy(s => s.LastName);
-                    break;
-            }*/
-            return View(/*students.ToList()*/);
+                offres = offres.Where(s => s.Titre.Contains(searchString)
+                                       || s.Description.Contains(searchString));
+            }
+            return View(offres.OrderByDescending(x => x.DateTime).ToList());
         }
 
         // GET: Offres/Details/5

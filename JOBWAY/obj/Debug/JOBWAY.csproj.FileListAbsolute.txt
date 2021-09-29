@@ -253,3 +253,7 @@ D:\EILCO\Methode-agile\TD\TP\JOBWAY\obj\Debug\JOBWAY.pdb
 D:\EILCO\Methode-agile\TD\TP\JOBWAY\obj\Debug\JOBWAY.Migrations.InitialCreate.resources
 D:\EILCO\Methode-agile\TD\TP\JOBWAY\obj\Debug\JOBWAY.csproj.GenerateResource.cache
 D:\EILCO\Methode-agile\TD\TP\JOBWAY\obj\Debug\JOBWAY.Migrations.offreUpdate1.resources
+D:\EILCO\Methode-agile\TD\TP\JOBWAY\bin\PagedList.dll
+D:\EILCO\Methode-agile\TD\TP\JOBWAY\bin\PagedList.Mvc.dll
+D:\EILCO\Methode-agile\TD\TP\JOBWAY\bin\PagedList.xml
+D:\EILCO\Methode-agile\TD\TP\JOBWAY\bin\PagedList.Mvc.xml
