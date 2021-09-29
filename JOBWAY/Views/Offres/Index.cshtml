@@ -76,7 +76,7 @@
         <div class="form-inline" style="margin-top:20px;margin-bottom:20px">
             <div class="form-group mb-2">
                 <label class="sr-only">Chercher</label>
-                @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+                @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Recherche par titre, categorie, ville ou description" })
             </div>
             <input type="submit" class="btn btn-primary mb-2" value="Search" />
         </div>

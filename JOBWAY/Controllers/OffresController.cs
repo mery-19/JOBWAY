@@ -24,7 +24,7 @@ namespace JOBWAY.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 offres = offres.Where(s => s.Titre.Contains(searchString)
-                                       || s.Description.Contains(searchString));
+                                       || s.Description.Contains(searchString) || s.Categorie.Contains(searchString));
             }
 
             List<Offre> dispoonibles = new List<Offre>();
