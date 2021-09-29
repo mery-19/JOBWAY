@@ -68,7 +68,7 @@
 
     <!-- Page Heading -->
     <h2 class="mt-0">
-            Liste des offres
+        Liste des offres
     </h2>
 
     @using (Html.BeginForm("Index", "Offres", FormMethod.Get))
@@ -78,13 +78,17 @@
                 <label class="sr-only">Chercher</label>
                 @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
             </div>
-            <input type="submit" class="btn btn-primary mb-2" value="Search"/>
+            <input type="submit" class="btn btn-primary mb-2" value="Search" />
         </div>
+    }
+
+    @{
+        int count = 0;
     }
 
     @foreach (var item in Model)
     {
-
+        count = 1;
         <!-- Project One -->
         <div class="row">
             <div class="col-md-7">
@@ -104,6 +108,13 @@
         </div>
         <!-- /.row -->
         <hr>
+    }
+
+    @{
+        if (count == 0)
+        {  
+            <h2>Il n'y a pas des offres disponibles</h2>
+        }
     }
 
     <!-- Pagination -->

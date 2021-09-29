@@ -26,7 +26,17 @@ namespace JOBWAY.Controllers
                 offres = offres.Where(s => s.Titre.Contains(searchString)
                                        || s.Description.Contains(searchString));
             }
-            return View(offres.OrderByDescending(x => x.DateTime).ToList());
+
+            List<Offre> dispoonibles = new List<Offre>();
+            foreach (var o in offres.ToList())
+            {
+                if(o.IsTaken == false)
+                {
+                    dispoonibles.Add(o);
+                }
+            }
+
+            return View(dispoonibles.OrderByDescending(x => x.DateTime));
         }
 
         // GET: Offres/Details/5
