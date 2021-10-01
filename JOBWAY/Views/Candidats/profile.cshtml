@@ -49,11 +49,11 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="about-avatar">
-                        <img src="https://via.placeholder.com/250x200" class="rounded-circle" title="" alt="">
+                        <img src='~/files/@(Model.Image)' class="rounded-circle" title="" alt="">
                     </div>
                     <div class="py-4">
-@*                        @Html.ActionLink("Consulter le CV", "download", new { target = "_blank" })
-*@                    </div>
+                        @Html.ActionLink("Consulter le CV", "download", new { id = Model.Id }, new { target = "_blank" })
+                    </div>
                 </div>
             </div>
         </div>

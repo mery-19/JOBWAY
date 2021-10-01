@@ -61,21 +61,23 @@
         <!-- Project One -->
 <div class="row">
     <div class="col-md-7">
+       
         <a href="#">
-                                <img class="img-fluid rounded mb-3 mb-md-0" src="https://via.placeholder.com/650x300" alt="">
-                                
-@*            <img class="img-fluid rounded mb-3 mb-md-0" src='"~/files/"+@(item.Image)' alt="">
-*@
+@*            <img class="img-fluid rounded mb-3 mb-md-0" src="https://via.placeholder.com/650x300" alt="">
+*@            <img class="img-fluid rounded mb-3 mb-md-0" src='~/files/@(item.Image)' alt="">
+
+            @*            <img class="img-fluid rounded mb-3 mb-md-0" src='"~/files/"+@(item.Image)' alt="">
+            *@
             @*  @if (String.IsNullOrEmpty(item.Image))
-                {
-                    <img class="img-fluid rounded mb-3 mb-md-0" src="https://via.placeholder.com/650x300" alt="">
+        {
+            <img class="img-fluid rounded mb-3 mb-md-0" src="https://via.placeholder.com/650x300" alt="">
 
-                }
-                else
-                {
-                    <img class="img-fluid rounded mb-3 mb-md-0" src="~/<% item.Image %>" alt="">
+        }
+        else
+        {
+            <img class="img-fluid rounded mb-3 mb-md-0" src="~/<% item.Image %>" alt="">
 
-                }*@
+        }*@
         </a>
     </div>
     <div class="col-md-5">

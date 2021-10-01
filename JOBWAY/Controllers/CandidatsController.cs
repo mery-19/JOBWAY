@@ -23,19 +23,13 @@ namespace JOBWAY.Controllers
             return View(candidats.ToList());
         }
 
-        public void download()
+        public void download(int? id)
         {
-            //PdfFiles is the name of the folder where these pdf files are located
-            /*  var path = Server.MapPath("~/files/cv.pdf");
-              var memory = new MemoryStream();
-              using (var stream = new FileStream(path, FileMode.Open))
-              {
-                  stream.CopyToAsync(memory);
-              }
-              memory.Position = 0;
-              return File(memory, "application/pdf", Path.GetFileName(path));*/
+            
+            Candidat candidat = db.Candidats.Find(id);
+           
 
-            Response.Redirect("~/files/cv.pdf");
+            Response.Redirect("~/files/"+candidat.Cv);
         }
 
         // GET: profile

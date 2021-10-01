@@ -108,8 +108,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="files\cap.png" />
     <Content Include="files\opera.png" />
     <Content Include="files\orange.jpg" />
+    <Content Include="files\profile1.jpeg" />
+    <Content Include="files\profile2.jfif" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
