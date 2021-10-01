@@ -4,67 +4,66 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>Les candidats</h1>
 
-@using (Html.BeginForm("Index", "Candidats", FormMethod.Get))
-{
-    <div class="form-inline row" style="margin-top:20px;margin-bottom:20px">
-        <div class="form-group col-md-4">
-            @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Recherche par compétences, technolgies" })
-        </div>
-        <div class="col-md-2">
-            <input type="submit" class="btn btn-primary" value="Rechercher" />
+<div class="p-5">
 
-        </div>
-    </div>
-}
+    <h1>Les candidats</h1>
 
-<div class="row mt-3">
-
-
-
-    @{
-        int count = 0;
-    }
-
-    @foreach (var item in Model)
+    @using (Html.BeginForm("Index", "Candidats", FormMethod.Get))
     {
-        count = 1;
-
-        <div class="col-md-6">
-            <!-- Project One -->
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <a href="#">
-                        <img class="img-fluid rounded mb-3 mb-md-0" src="https://via.placeholder.com/300x200" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6" style="font-size:12px;">
-                    <h5>@Html.DisplayFor(modelItem => item.Usernname)</h5>
-                    <p><strong>@Html.DisplayNameFor(model => model.Email) :</strong> @Html.DisplayFor(modelItem => item.Email)</p>
-                    <p><strong>@Html.DisplayNameFor(model => model.Phone) :</strong> @Html.DisplayFor(modelItem => item.Phone)</p>
-                    <p><strong>Compétences :</strong> @Html.DisplayFor(modelItem => item.Poste)</p>
-
-                    @*                @Html.ActionLink("Voir profile", "Profile", new { id = item.Id }, new { @class = "btn btn-primary" })
-                    *@
-                </div>
+        <div class="form-inline row" style="margin-top:20px;margin-bottom:20px">
+            <div class="form-group col-md-4">
+                @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Recherche par compétences, technolgies" })
             </div>
-            <hr />
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-primary" value="Rechercher" />
 
+            </div>
         </div>
-
-        <!-- /.row -->
     }
 
-    @{
-        if (count == 0)
-        {
-            <h2>Il n'y a pas des offres disponibles</h2>
+    <div class="row mt-3">
+
+
+
+        @{
+            int count = 0;
         }
-    }
+
+        @foreach (var item in Model)
+        {
+            count = 1;
+
+            <div class="col-md-6">
+                <!-- Project One -->
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <a href="#">
+                            <img class="img-fluid rounded mb-3 mb-md-0" src="https://via.placeholder.com/300x200" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6" style="font-size:12px;">
+                        <h5>@Html.DisplayFor(modelItem => item.Usernname)</h5>
+                        <p><strong>@Html.DisplayNameFor(model => model.Email) :</strong> @Html.DisplayFor(modelItem => item.Email)</p>
+                        <p><strong>@Html.DisplayNameFor(model => model.Phone) :</strong> @Html.DisplayFor(modelItem => item.Phone)</p>
+                        <p><strong>Compétences :</strong> @Html.DisplayFor(modelItem => item.Poste)</p>
+
+                         @Html.ActionLink("Voir profile", "Profile", new { id = item.Id }, new { @class = "btn btn-primary" })
+                        
+                    </div>
+                </div>
+                <hr />
+
+            </div>
+
+            <!-- /.row -->
+        }
+
+        @{
+            if (count == 0)
+            {
+                <h2>Il n'y a pas des offres disponibles</h2>
+            }
+        }
+    </div>
 </div>
-
-@*
-
-    </table>
-*@

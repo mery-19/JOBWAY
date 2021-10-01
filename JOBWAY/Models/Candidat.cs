@@ -13,6 +13,7 @@ namespace JOBWAY.Models
         private string password;
         private string description;
         private string cv;
+        private string image;
         private string phone;
         private string email;
         private string poste;
@@ -26,6 +27,7 @@ namespace JOBWAY.Models
         public string Phone { get => phone; set => phone = value; }
         public string Email { get => email; set => email = value; }
         public string Poste { get => poste; set => poste = value; }
+        public string Image { get => image; set => image = value; }
 
         public DateTime Date_creation { get => date_creation; set => date_creation = value; }
     }

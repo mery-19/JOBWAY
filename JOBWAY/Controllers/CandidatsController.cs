@@ -39,9 +39,18 @@ namespace JOBWAY.Controllers
         }
 
         // GET: profile
-        public ActionResult profile()
+        public ActionResult profile(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Candidat candidat = db.Candidats.Find(id);
+            if (candidat == null)
+            {
+                return HttpNotFound();
+            }
+            return View(candidat);
         }
 
         // GET: Candidats/Details/5

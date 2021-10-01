@@ -108,6 +108,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="files\opera.png" />
+    <Content Include="files\orange.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -142,6 +144,10 @@
     <Compile Include="Migrations\202110011211199_addAttributeToCandidat.cs" />
     <Compile Include="Migrations\202110011211199_addAttributeToCandidat.Designer.cs">
       <DependentUpon>202110011211199_addAttributeToCandidat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110011304582_addImageToCandidate.cs" />
+    <Compile Include="Migrations\202110011304582_addImageToCandidate.Designer.cs">
+      <DependentUpon>202110011304582_addImageToCandidate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110011211199_addAttributeToCandidat.resx">
       <DependentUpon>202110011211199_addAttributeToCandidat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110011304582_addImageToCandidate.resx">
+      <DependentUpon>202110011304582_addImageToCandidate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
