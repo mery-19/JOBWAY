@@ -17,16 +17,16 @@ namespace JOBWAY.Controllers
         private Model1 db = new Model1();
 
         // GET: Offres
-        public ActionResult Index(string searchString)
+        /**/
+        public ActionResult Index(string searchString, string Categories)
         {
             var offres = from o in db.Offres
                            select o;
-            if (!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(searchString) && !String.IsNullOrEmpty(Categories))
             {
-                offres = offres.Where(s => s.Titre.Contains(searchString)
-                                       || s.Description.Contains(searchString) 
-                                       || s.Categorie.Contains(searchString)
-                                       || s.Ville.Contains(searchString));
+                offres = offres.Where(s => (s.Titre.Contains(searchString)
+                                       || s.Description.Contains(searchString)
+                                       || s.Ville.Contains(searchString)) && s.Categorie.Contains(Categories));
             }
 
             List<Offre> dispoonibles = new List<Offre>();
@@ -37,6 +37,16 @@ namespace JOBWAY.Controllers
                     dispoonibles.Add(o);
                 }
             }
+
+            ViewBag.Categories = new SelectList(
+    new List<SelectListItem>
+    {
+        new SelectListItem { Selected = false, Text = "Informatique", Value = "Informatique"},
+        new SelectListItem { Selected = false, Text = "Web", Value ="Web"},
+        new SelectListItem { Selected = false, Text = "Commerce", Value ="Commerce"},
+
+
+    }, "Value", "Text", 1);
 
             return View(dispoonibles.OrderByDescending(x => x.DateTime));
         }
@@ -59,6 +69,16 @@ namespace JOBWAY.Controllers
         // GET: Offres/Create
         public ActionResult Create()
         {
+            ViewBag.Categorie = new SelectList(
+   new List<SelectListItem>
+   {
+        new SelectListItem { Selected = false, Text = "Informatique", Value = "Informatique"},
+        new SelectListItem { Selected = false, Text = "Web", Value ="Web"},
+        new SelectListItem { Selected = false, Text = "Commerce", Value ="Commerce"},
+
+
+   }, "Value", "Text", 1);
+
             return View();
         }
 
@@ -67,8 +87,17 @@ namespace JOBWAY.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Titre,Description,Image,Salaire,Phone,Email")] Offre offre)
+        public ActionResult Create(Offre offre)
         {
+            ViewBag.Categorie = new SelectList(
+   new List<SelectListItem>
+   {
+        new SelectListItem { Selected = false, Text = "Informatique", Value = "Informatique"},
+        new SelectListItem { Selected = false, Text = "Web", Value ="Web"},
+        new SelectListItem { Selected = false, Text = "Commerce", Value ="Commerce"},
+
+
+   }, "Value", "Text", 1);
             if (ModelState.IsValid)
             {
                 db.Offres.Add(offre);
@@ -99,7 +128,7 @@ namespace JOBWAY.Controllers
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Titre,Description,Image,Salaire,Phone,Email")] Offre offre)
+        public ActionResult Edit(Offre offre)
         {
             if (ModelState.IsValid)
             {

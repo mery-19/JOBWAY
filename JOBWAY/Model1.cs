@@ -19,6 +19,8 @@ namespace JOBWAY
 
         public System.Data.Entity.DbSet<JOBWAY.Models.Offre> Offres { get; set; }
 
+        public System.Data.Entity.DbSet<JOBWAY.Models.Candidat> Candidats { get; set; }
+
         // Ajoutez un DbSet pour chaque type d'entité à inclure dans votre modèle. Pour plus d'informations 
         // sur la configuration et l'utilisation du modèle Code First, consultez http://go.microsoft.com/fwlink/?LinkId=390109.
 

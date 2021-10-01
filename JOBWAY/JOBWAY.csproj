@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CandidatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OffresController.cs" />
     <Compile Include="Global.asax.cs">
@@ -134,8 +135,13 @@
     <Compile Include="Migrations\202109291508442_addVille.Designer.cs">
       <DependentUpon>202109291508442_addVille.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109302223202_Create2.cs" />
+    <Compile Include="Migrations\202109302223202_Create2.Designer.cs">
+      <DependentUpon>202109302223202_Create2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
+    <Compile Include="Models\Candidat.cs" />
     <Compile Include="Models\Offre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +151,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="files\cv.pdf" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -154,6 +161,12 @@
     <Content Include="Views\Offres\Edit.cshtml" />
     <Content Include="Views\Offres\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Candidats\Create.cshtml" />
+    <Content Include="Views\Candidats\Delete.cshtml" />
+    <Content Include="Views\Candidats\Details.cshtml" />
+    <Content Include="Views\Candidats\Edit.cshtml" />
+    <Content Include="Views\Candidats\Index.cshtml" />
+    <Content Include="Views\Candidats\profile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109291508442_addVille.resx">
       <DependentUpon>202109291508442_addVille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109302223202_Create2.resx">
+      <DependentUpon>202109302223202_Create2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -6,9 +6,7 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 @*<table class="table">
     <tr>
         <th>
@@ -67,20 +65,47 @@
 <div class="container">
 
     <!-- Page Heading -->
-    <h2 class="mt-0">
+    <h2 class="mt-5">
         Liste des offres
     </h2>
 
     @using (Html.BeginForm("Index", "Offres", FormMethod.Get))
     {
-        <div class="form-inline" style="margin-top:20px;margin-bottom:20px">
-            <div class="form-group mb-2">
-                <label class="sr-only">Chercher</label>
-                @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Recherche par titre, categorie, ville ou description" })
+        <div class="form-inline row" style="margin-top:20px;margin-bottom:20px">
+            <div class="form-group col-md-4">
+                @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Par titre, ville ou description" })
             </div>
-            <input type="submit" class="btn btn-primary mb-2" value="Search" />
+            <div class="form-group col-md-4">
+                @Html.DropDownList("Categories", null, "Par catégorie", htmlAttributes: new { @class = "form-control produit_multi", style = "z-index:1" })
+            </div>
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-primary" value="Rechercher" />
+
+            </div>
         </div>
     }
+    @*<div class="col-md-6">
+        @using (Html.BeginForm("Index", "Offres", FormMethod.Get))
+        {
+        <div class="form-inline row" style="margin-top:20px;margin-bottom:20px">
+            <div class="form-group col-md-8">
+                @Html.DropDownList("options", null, "select", htmlAttributes: new { @class = "form-control produit_multi", style = "z-index:1" })
+            </div>
+            <div class="col-md-4">
+
+                <input type="submit" class="btn btn-primary mb-2" value="Search" />
+                </div>
+            </div>
+            }
+
+        </div>*@
+
+
+
+
+
+
+
 
     @{
         int count = 0;
@@ -117,7 +142,7 @@
 
     @{
         if (count == 0)
-        {  
+        {
             <h2>Il n'y a pas des offres disponibles</h2>
         }
     }
@@ -146,6 +171,11 @@
             </a>
         </li>
     </ul>-->
+
+
+    <p>
+        @Html.ActionLink("Crée un nouveau offre", "Create")
+    </p>
 
 </div>
 <!-- /.container -->
