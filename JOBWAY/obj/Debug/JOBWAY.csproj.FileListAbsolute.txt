@@ -442,3 +442,4 @@ D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.pdb
 D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.Migrations.addCategorie.resources
 D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.Migrations.addVille.resources
 D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.Migrations.Create2.resources
+D:\USER\EILCO\S1\agile\projet\The project\JOBWAY\JOBWAY\obj\Debug\JOBWAY.Migrations.addAttributeToCandidat.resources

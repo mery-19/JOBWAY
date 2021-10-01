@@ -139,6 +139,10 @@
     <Compile Include="Migrations\202109302223202_Create2.Designer.cs">
       <DependentUpon>202109302223202_Create2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110011211199_addAttributeToCandidat.cs" />
+    <Compile Include="Migrations\202110011211199_addAttributeToCandidat.Designer.cs">
+      <DependentUpon>202110011211199_addAttributeToCandidat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Models\Candidat.cs" />
@@ -192,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109302223202_Create2.resx">
       <DependentUpon>202109302223202_Create2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110011211199_addAttributeToCandidat.resx">
+      <DependentUpon>202110011211199_addAttributeToCandidat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

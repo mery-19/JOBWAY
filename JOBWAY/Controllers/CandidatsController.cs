@@ -69,7 +69,7 @@ namespace JOBWAY.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Usernname,Password,Description,Cv,Phone,Email,Date_creation")] Candidat candidat)
+        public ActionResult Create(Candidat candidat)
         {
             if (ModelState.IsValid)
             {
