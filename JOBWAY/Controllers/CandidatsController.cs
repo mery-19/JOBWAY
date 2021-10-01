@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using JOBWAY;
 using JOBWAY.Models;
 
 namespace JOBWAY.Controllers
@@ -17,9 +12,15 @@ namespace JOBWAY.Controllers
         private Model1 db = new Model1();
 
         // GET: Candidats
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Candidats.ToList());
+            var candidats = from o in db.Candidats
+                         select o;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                candidats = candidats.Where(s => s.Poste.Contains(searchString));
+            }
+            return View(candidats.ToList());
         }
 
         public void download()
